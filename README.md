@@ -26,19 +26,3 @@ Instead of relying on non-linear optimization techniques (e.g., Gradient Descent
   - Development of the **Regularised Orthogonal Least Squares (ROLS)** algorithm, reducing the subset selection computational complexity from $\mathcal{O}(p^2)$ to $\mathcal{O}(p)$.
 - **Deep Learning Benchmarking:** Direct comparison between the linear algebraic approach (NumPy/SciPy) and completely supervised non-linear baselines (PyTorch).
 
-## Repository Structure
-```text
-.
-├── data/                   # Synthetic datasets generation scripts
-├── src/
-│   ├── rbf_network.py      # Core RBF linear models (OLS, ROLS)
-│   ├── cross_val.py        # LOO-CV and GCV metrics computation
-│   ├── pytorch_baseline.py # Non-linear RBF optimization using PyTorch
-│   └── utils.py            # Plotting and visualization tools
-├── notebooks/              # Jupyter notebooks with step-by-step demonstrations
-│   ├── 01_Regression_and_GCV.ipynb
-│   ├── 02_ROLS_Subset_Selection.ipynb
-│   └── 03_2D_Classification.ipynb
-├── thesis_document/        # LaTeX source code and final PDF
-├── requirements.txt        # Python dependencies
-└── README.md
