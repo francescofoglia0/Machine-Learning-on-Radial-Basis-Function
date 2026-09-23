@@ -20,11 +20,11 @@ Key algorithmic implementations include:
 
 ## 📂 Repository Structure
 
-*   `docs/`: Contains the full written thesis document (PDF) detailing the mathematical proofs, algorithmic complexity analysis, and extensive results.
+*   `docs/`: Contains the full written thesis document (`Machine Learning on Radial Basis Function.pdf`) detailing the mathematical proofs, algorithmic complexity analysis, and extensive results.
 *   `notebooks/`: Contains the interactive Jupyter Notebooks used for the experiments:
-    *   *Note: Describe briefly what Notebook 1 does (e.g., Regression experiments).*
-    *   *Note: Describe briefly what Notebook 2 does (e.g., 2D Classification & PyTorch benchmarking).*
-
+    *   `shockfunction.ipynb`: Demonstrates the RBF and ROLS algorithm applied to the regression of a highly non-linear "shock" function, showcasing the model's function approximation capabilities.
+    *   `simulazioni_tesi.ipynb`: Contains the core experimental pipeline, including 2D classification tasks, automated hyperparameter tuning via GCV, and performance benchmarking against PyTorch deep learning models.
+    *   
 ## 🚀 How to Run the Experiments
 
 To reproduce the experiments and explore the algorithms, clone the repository and set up the Python environment:
