@@ -1,28 +1,51 @@
-# Machine Learning Methods based on Radial Basis Functions
+# Machine Learning on Radial Basis Functions (RBF)
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=flat&logo=numpy&logoColor=white)](https://numpy.org/)
-[![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=flat&logo=scipy&logoColor=white)](https://scipy.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?style=for-the-badge&logo=Jupyter&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white)
 
-**Bachelor's Thesis in Mathematics for Engineering**  
-*Politecnico di Torino* | *A.Y. 2025/2026*  
-**Author:** Francesco Foglia  
-**Advisor:** Prof. Tommaso Vanzan  
+**BSc Thesis in Mathematical Engineering** — *Politecnico di Torino*
 
-## Overview
-This repository contains the code and numerical experiments developed for my Bachelor's thesis. 
-The project explores the application of **Radial Basis Function (RBF) Neural Networks** for supervised learning tasks, specifically non-parametric regression and 2D spatial classification. 
+This repository contains the research, mathematical formulation, and experimental codebase for training Radial Basis Function (RBF) neural networks. The project explores treating RBF networks as strictly convex linear models, avoiding the non-convex optimization pitfalls (local minima) typical of standard deep learning approaches.
 
-Instead of relying on non-linear optimization techniques (e.g., Gradient Descent) which are computationally heavy and prone to local minima, this work formulates RBF networks as **strictly convex linear statistical models**. This approach guarantees global convergence, ensures numerical stability, and drastically reduces computational training time.
+## 📖 Abstract & Methodology
 
-## Key Features & Algorithms
-- **Linear RBF Networks:** Exact analytical resolution of network weights via dense linear system inversion, bypassing standard backpropagation.
-- **Ridge Regression (Global & Local):** Implementation of Tikhonov regularization to manage the bias-variance tradeoff and prevent overfitting on noisy datasets.
-- **Automated Model Selection:** Dynamic hyperparameter tuning and structural evaluation using **Leave-One-Out CV (LOO-CV)** and **Generalized Cross-Validation (GCV)**.
-- **Algorithmic Efficiency:** 
-  - Implementation of **Forward Selection**.
-  - Implementation of **Orthogonal Least Squares (OLS)** via Gram-Schmidt orthogonalization.
-  - Development of the **Regularised Orthogonal Least Squares (ROLS)** algorithm, reducing the subset selection computational complexity from $\mathcal{O}(p^2)$ to $\mathcal{O}(p)$.
-- **Deep Learning Benchmarking:** Direct comparison between the linear algebraic approach (NumPy/SciPy) and completely supervised non-linear baselines (PyTorch).
+Standard neural networks often suffer from highly non-convex loss landscapes. This thesis investigates an alternative approach using RBF networks for regression and 2D classification tasks. By fixing the non-linear hidden layer and optimizing only the output weights, the problem is reduced to a convex linear system.
 
+Key algorithmic implementations include:
+*   **ROLS (Regularised Orthogonal Least Squares):** An advanced algorithm implemented to reduce subset selection complexity to linear complexity, efficiently identifying the most significant centers for the RBF network.
+*   **GCV (Generalized Cross-Validation):** An automated hyperparameter tuning method used to guarantee global convergence and prevent overfitting without requiring a separate validation set.
+*   **Benchmarking:** The convex RBF approach is benchmarked against standard Deep Learning baselines implemented in **PyTorch** to compare training efficiency, convergence guarantees, and computational overhead.
+
+## 📂 Repository Structure
+
+*   `docs/`: Contains the full written thesis document (PDF) detailing the mathematical proofs, algorithmic complexity analysis, and extensive results.
+*   `notebooks/`: Contains the interactive Jupyter Notebooks used for the experiments:
+    *   *Note: Describe briefly what Notebook 1 does (e.g., Regression experiments).*
+    *   *Note: Describe briefly what Notebook 2 does (e.g., 2D Classification & PyTorch benchmarking).*
+
+## 🚀 How to Run the Experiments
+
+To reproduce the experiments and explore the algorithms, clone the repository and set up the Python environment:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/francescofoglia0/Machine-Learning-on-Radial-Basis-Function.git](https://github.com/francescofoglia0/Machine-Learning-on-Radial-Basis-Function.git)
+   cd Machine-Learning-on-Radial-Basis-Function
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Launch Jupyter:**
+   ```bash
+   jupyter notebook
+   ```
+   Navigate to the `notebooks/` directory and open the `.ipynb` files to run the interactive experiments.
+
+## 🎓 Academic Context
+
+This research was conducted as the final thesis for the Bachelor's Degree in Mathematical Engineering at Politecnico di Torino (Graduated with 110/110 *cum laude*).
