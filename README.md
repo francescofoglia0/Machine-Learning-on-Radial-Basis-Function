@@ -24,7 +24,7 @@ Key algorithmic implementations include:
 *   `notebooks/`: Contains the interactive Jupyter Notebooks used for the experiments:
     *   `shockfunction.ipynb`: Demonstrates the RBF and ROLS algorithm applied to the regression of a highly non-linear "shock" function, showcasing the model's function approximation capabilities.
     *   `simulazioni_tesi.ipynb`: Contains the core experimental pipeline, including 2D classification tasks, automated hyperparameter tuning via GCV, and performance benchmarking against PyTorch deep learning models.
-    *   
+      
 ## 🚀 How to Run the Experiments
 
 To reproduce the experiments and explore the algorithms, clone the repository and set up the Python environment:
